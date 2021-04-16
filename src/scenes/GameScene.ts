@@ -1,10 +1,11 @@
 import * as Phaser from 'phaser';
+import { CST } from "../constants"
 
 export default class GameScene extends Phaser.Scene
 {
     constructor()
     {
-        super("game");
+        super(CST.SCENES.PLAY);
     }
 
     create() 
@@ -12,7 +13,6 @@ export default class GameScene extends Phaser.Scene
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)
         this._drawGrid(graphics);
-        console.log("huy");
     }
 
     private _drawGrid(graphics)

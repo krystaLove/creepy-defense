@@ -1,26 +1,20 @@
 import * as Phaser from 'phaser';
-import GameScene from './GameScene';
+import { CST } from "../constants"
 
 export default class MenuScene extends Phaser.Scene 
 {
     constructor()
     {
-        super("menu");
-    }
-
-    preload()
-    {
-        this.load.image('logo', 'assets/logo.png');
-        this.load.image('start-btn-texture', 'assets/startButton.png');
+        super(CST.SCENES.MENU);
     }
 
     create()
     {
-        let logo = this.add.image(this.game.renderer.width / 2, this.game.renderer.height * 0.2, "logo")
+        let logo = this.add.image(this.game.renderer.width / 2, this.game.renderer.height * 0.2, CST.IMAGE.GAME_LOGO)
                            .setDepth(0)
                            .setScale(0.5);
 
-        let startButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, "start-btn-texture").setDepth(1);
+        let startButton = this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 2, CST.IMAGE.PLAY).setDepth(1);
         startButton.setScale(0.25);
         startButton.setInteractive();
 
@@ -33,13 +27,8 @@ export default class MenuScene extends Phaser.Scene
         });
 
         startButton.on("pointerup", () => {
-            this.scene.start("game");
+            this.scene.start(CST.SCENES.PLAY);
         });
                                    
-
-        //this.add.image(this.game.renderer.width / 2, this.game.renderer.height / 3, "start-btn-texture").setDepth(1);
     }
-
-
-
 }
