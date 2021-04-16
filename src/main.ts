@@ -1,4 +1,6 @@
 import * as Phaser from 'phaser';
+import MenuScene from "./scenes/MenuScene";
+import GameScene from "./scenes/GameScene";
 
 const gameConfig: Phaser.Types.Core.GameConfig = {
   title: 'Creepy Defenser',
@@ -16,7 +18,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
       debug: true,
     },
   },
- 
+  scene : [MenuScene, GameScene],
   parent: 'game',
   backgroundColor: '#000000',
 };
