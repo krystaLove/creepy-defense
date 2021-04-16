@@ -1,5 +1,7 @@
 import * as Phaser from 'phaser';
+
 import MenuScene from "./scenes/MenuScene";
+import PreloaderScene from "./scenes/PreloaderScene";
 import GameScene from "./scenes/GameScene";
 
 const gameConfig: Phaser.Types.Core.GameConfig = {
@@ -18,7 +20,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
       debug: true,
     },
   },
-  scene : [MenuScene, GameScene],
+  scene : [PreloaderScene, MenuScene, GameScene],
   parent: 'game',
   backgroundColor: '#000000',
 };
