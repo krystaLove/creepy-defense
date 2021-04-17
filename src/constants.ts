@@ -6,6 +6,8 @@ export const CST = {
     },
     IMAGE: {
         GAME_LOGO: "logo.png",
-        PLAY: "startButton.png"
-    }
+        PLAY: "startButton.png",
+        ENEMY: "baseEnemy.png"
+    },
+    CELL_SIZE: 64
 }
