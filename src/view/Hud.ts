@@ -105,7 +105,7 @@ export default class Hud {
         let cs = CST.CELL_SIZE;
         let zone = this.mScene.add.zone(x, y, cs, cs).setRectangleDropZone(cs, cs);
 
-        this.mDropZoneGraphics.lineStyle(1, 0xFF3FFF, 1);
+        this.mDropZoneGraphics.lineStyle(1, 0xFFFFFF, 1);
         this.mDropZoneGraphics.strokeRect(zone.x - zone.input.hitArea.width / 2, zone.y - zone.input.hitArea.height / 2, zone.input.hitArea.width, zone.input.hitArea.height);
     }
 }
