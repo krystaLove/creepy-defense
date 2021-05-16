@@ -17,9 +17,19 @@ export default class PreloaderScene extends Phaser.Scene
         }
     }
 
+    private _loadTiles()
+    {
+        this.load.setPath("./assets/tiles");
+
+        for(let prop in CST.TILES){
+            this.load.image(CST.TILES[prop], CST.TILES[prop]);
+        }
+    }
+
     preload() 
     {
         this._loadImages();
+        this._loadTiles();
 
         let loadingBar = this.add.graphics({
             fillStyle: {
