@@ -15,6 +15,9 @@ export default class PreloaderScene extends Phaser.Scene
         for(let prop in CST.IMAGE){
             this.load.image(CST.IMAGE[prop], CST.IMAGE[prop]);
         }
+        for(let prop in CST.IMAGE_T){
+            this.load.image(CST.IMAGE_T[prop], CST.IMAGE_T[prop]);
+        }
     }
 
     preload() 
