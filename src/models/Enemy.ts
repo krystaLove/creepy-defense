@@ -6,6 +6,7 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     private mPath: Phaser.Curves.Path;
 
     private mEnemySpeed: number = 1 / 50000;
+    public isDead = false;
 
     private mHp = 50;
 
@@ -13,7 +14,7 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     {
         super(scene, 0, 0, imageProp);
         this.mPath = path;
-        this.setScale(0.1);
+        this.setScale(1.5);
         this.startOnPath();
     }
 
@@ -46,14 +47,42 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.mHp -= dmg;
         this._tintEnemy();
         if(this.mHp <= 0){
-            this.setActive(false);
-            this.setVisible(false);
+            this._onDeath();
         }
+    }
+
+    protected _onDeath(){
+        this.anims.stop();
+        this.isDead = true;
+
+        this.mEnemySpeed = 0;
+        this.alpha = 0;
+        let sprite: Phaser.GameObjects.Sprite = this as Phaser.GameObjects.Sprite;
+
+        if(this.anims.exists('death')){
+            this.anims.play('death');
+        }
+
+        this.scene.add.tween({
+            targets: [sprite],
+            ease: 'Sine.easeInOut',
+            duration: 1200,
+            delay: 0,
+            alpha: {
+              getStart: () => 1,
+              getEnd: () => 0
+            },
+            onComplete: () => {
+                this.setActive(false);
+                this.setVisible(false);
+            }
+          });
+        
     }
 
     private _tintEnemy(){
         this.setTint(0xFF0000);
-        this.scene.time.delayedCall(1000, () => {
+        this.scene.time.delayedCall(300, () => {
             this.clearTint();
         })
     }
