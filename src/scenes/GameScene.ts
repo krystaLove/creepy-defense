@@ -15,6 +15,8 @@ export default class GameScene extends Phaser.Scene
     private mLevelView: LevelView;
     private mHud: Hud;
 
+    private towers: Tower[] = [];
+
     constructor()
     {
         super(CST.SCENES.PLAY); 
@@ -28,7 +30,7 @@ export default class GameScene extends Phaser.Scene
         this.mHud = new Hud(this, this.mLevel);
         this.mHud.makeHud();
 
-        
+
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)
 
@@ -65,12 +67,20 @@ export default class GameScene extends Phaser.Scene
     update(time, delta)
     {
         this.mEnemySpawner.update(time, delta);
+
+        this.towers.forEach(tower => {
+            tower.update(time, delta);
+            tower.updateEnemy(this.mEnemySpawner.getEnemies());
+        });
     }
 
     setTower(x, y, img){
         let cs = CST.CELL_SIZE;
 
         this.mLevel.setTower((x - cs / 2) / cs, (y - cs / 2) / cs);
-        let tower =  new Tower(this.add.image(x, y, img).setInteractive());   
+        let tower =  new Tower(this.add.image(x, y, img).setInteractive(), 300, this.mEnemySpawner.getEnemies(),x,y, this);
+        this.towers.push(tower);
+        
+        
     }
 }

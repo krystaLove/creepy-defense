@@ -27,6 +27,10 @@ export default class EnemySpawner {
         });
     }
 
+    getEnemies(): Enemy[]{
+        return this.mEnemyPool;
+    }
+
     private _trySpawn(time)
     {
         if(this._canSpawn(time)){
