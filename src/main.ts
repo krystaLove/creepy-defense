@@ -10,8 +10,8 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
  
   scale: {
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 1000,
+    height: 900,
   },
   
   pixelArt: true,
