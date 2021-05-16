@@ -41,7 +41,7 @@ export default class GameScene extends Phaser.Scene
         //this._drawGrid(graphics);
 
         graphics.lineStyle(2, 0xFFFF00, 1);
-        this.path.draw(graphics);
+        //this.path.draw(graphics);
 
         this.mEnemySpawner = new EnemySpawner(this, this.path);
     }
