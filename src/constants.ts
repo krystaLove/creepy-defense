@@ -18,6 +18,10 @@ export const CST = {
         EYE_ATLAS: "eye.json",
         BIGBOY_ATLAS: "bigboy.json"
     },
+    AUDIO: {
+        THEME: "main_theme.mp3",
+        HIT: "hit.wav"
+    },
     CELL_SIZE: 70,
     MAP_WIDTH: 14,
     MAP_HEIGHT: 10

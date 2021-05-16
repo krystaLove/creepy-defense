@@ -10,12 +10,15 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
 
     private mHp = 50;
 
+    private mHitSound;
+
     constructor(scene: Phaser.Scene, path: Phaser.Curves.Path, imageProp = CST.IMAGE.CULT_TOWER)
     {
         super(scene, 0, 0, imageProp);
         this.mPath = path;
         this.setScale(1.5);
         this.startOnPath();
+        this.mHitSound = this.scene.sound.add(CST.AUDIO.HIT, {loop: false});
     }
 
     update(time, delta)
@@ -46,6 +49,8 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     takeDamage(dmg: number){
         this.mHp -= dmg;
         this._tintEnemy();
+        this.mHitSound.play();
+        
         if(this.mHp <= 0){
             this._onDeath();
         }

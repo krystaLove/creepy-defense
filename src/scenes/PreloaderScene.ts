@@ -35,11 +35,20 @@ export default class PreloaderScene extends Phaser.Scene
         }
     }
 
+    private _loadSounds()
+    {
+        this.load.setPath("./assets/sounds");
+        for(let prop in CST.AUDIO){
+            this.load.audio(CST.AUDIO[prop], `${CST.AUDIO[prop]}`);
+        }
+    }
+
     preload() 
     {
         this._loadImages();
         this._loadTiles();
         this._loadAtlases();
+        this._loadSounds();
 
         let loadingBar = this.add.graphics({
             fillStyle: {

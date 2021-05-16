@@ -20,6 +20,8 @@ export default class GameScene extends Phaser.Scene
     private mPlayerHpText;
     private mPlayerHP: number = 30;
 
+    private mMusic;
+
     constructor()
     {
         super(CST.SCENES.PLAY); 
@@ -32,6 +34,9 @@ export default class GameScene extends Phaser.Scene
         this.mLevelView.loadView();
         this.mHud = new Hud(this, this.mLevel);
         this.mHud.makeHud();
+
+        this.mMusic = this.sound.add(CST.AUDIO.THEME, {loop: true});
+        this.mMusic.play();
 
         this.mPlayerHpText = this.add.text(CST.CELL_SIZE/3, CST.CELL_SIZE * 12, 'HP: ' + this.mPlayerHP,{ font: '46px Arial' });
         let graphics = this.add.graphics();
