@@ -39,7 +39,7 @@ export default class EnemySpawner {
         console.log(this.mTimeNextEnemy);   
         if(this._canSpawn(time)){
             console.log(this.mEnemyPool.length + " - size of enemy pool");
-            const enemy: Enemy = EnemyFactory.createEnemy(this.mScene, this.mPath, EnemyFactory.ENEMIES.DOG);
+            const enemy: Enemy = EnemyFactory.createRandomEnemy(this.mScene, this.mPath);//EnemyFactory.createEnemy(this.mScene, this.mPath, EnemyFactory.ENEMIES.DOG);
             this.mScene.add.existing(enemy);
             this.mEnemyPool.push(enemy);
             this.mTimeNextEnemy += Math.floor(Math.random() * (this.mTimeBetweenSpawnMax - this.mTimeBetweenSpawnMin)) + this.mTimeBetweenSpawnMin;
