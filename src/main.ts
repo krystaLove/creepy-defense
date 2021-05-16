@@ -10,7 +10,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
  
   scale: {
-    width: 1000,
+    width: 980,
     height: 900,
   },
   
