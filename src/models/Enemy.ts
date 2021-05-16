@@ -5,13 +5,13 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     private mFollower = {t: 0, vec: new Phaser.Math.Vector2()};
     private mPath: Phaser.Curves.Path;
 
-    private mEnemySpeed: number = 1 / 10000;
+    private mEnemySpeed: number = 1 / 50000;
 
     constructor(scene: Phaser.Scene, path: Phaser.Curves.Path)
     {
         super(scene, 0, 0, CST.IMAGE.ENEMY);
         this.mPath = path;
-        this.setScale(0.25);
+        this.setScale(0.1);
         this.startOnPath();
     }
 
