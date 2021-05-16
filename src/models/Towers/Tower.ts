@@ -40,7 +40,7 @@ export default class Tower {
     }
     private getEnemy(x, y, distance) {
         for(var i = 0; i < this.enemies.length; i++) {       
-            if(this.enemies[i].active && Phaser.Math.Distance.Between(x, y, this.enemies[i].x, this.enemies[i].y) <= distance)
+            if(!this.enemies[i].isDead && Phaser.Math.Distance.Between(x, y, this.enemies[i].x, this.enemies[i].y) <= distance)
                 return this.enemies[i];
         }
         return false;
