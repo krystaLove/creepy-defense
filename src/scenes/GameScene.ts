@@ -15,10 +15,11 @@ export default class GameScene extends Phaser.Scene
     private mLevelView: LevelView;
     private mHud: Hud;
 
-    private towers: Tower[] = [];
+    private towers: Tower[];
 
     private mPlayerHpText;
-    private mPlayerHP: number = 30;
+    private mPlayerHP;
+    private mPlayerGold;
 
     private mMusic;
 
@@ -29,6 +30,9 @@ export default class GameScene extends Phaser.Scene
 
     create() 
     {
+        this.towers = [];
+        this.mPlayerHP = 1;
+        this.mPlayerGold = 20;
         this.mLevel = new Level();
         this.mLevelView = new LevelView(this, this.mLevel);
         this.mLevelView.loadView();
@@ -94,7 +98,13 @@ export default class GameScene extends Phaser.Scene
         this.mPlayerHP -= dmg;
         this.mPlayerHpText.setText('HP: ' + this.mPlayerHP);
         if(this.mPlayerHP <= 0){
-            //lorum
+            this.scene.stop(CST.SCENES.PLAY);
+            this.scene.start(CST.SCENES.END);
+            this.mMusic.stop();
         }
+    }
+
+    addGold(gold: number){
+        this.mPlayerGold += gold;
     }
 }

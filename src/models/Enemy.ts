@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser';
 import { CST } from "../constants";
+import GameScene from '../scenes/GameScene';
 
 export default class Enemy extends Phaser.GameObjects.Sprite {
     private mFollower = {t: 0, vec: new Phaser.Math.Vector2()};
@@ -7,10 +8,14 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
 
     private mEnemySpeed: number = 1 / 50000;
     public isDead = false;
+    public isCompleted = false;
 
     private mHp = 50;
 
     private mHitSound;
+    private mDeathSound;
+    private mGold = 30;
+    private mDamage = 1;
 
     constructor(scene: Phaser.Scene, path: Phaser.Curves.Path, imageProp = CST.IMAGE.CULT_TOWER)
     {
@@ -18,7 +23,9 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.mPath = path;
         this.setScale(1.5);
         this.startOnPath();
+
         this.mHitSound = this.scene.sound.add(CST.AUDIO.HIT, {loop: false});
+        this.mDeathSound = this.scene.sound.add(CST.AUDIO.DEATH, {loop: false});;
     }
 
     update(time, delta)
@@ -33,6 +40,10 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.setPosition(this.mFollower.vec.x, this.mFollower.vec.y);
         if (this.mFollower.t >= 1)
         {
+            if(this.scene instanceof GameScene){
+                this.scene.playerTakeDamage(this.mDamage);
+            }
+            this.isCompleted = true;
             this.setActive(false);
             this.setVisible(false);
         }
@@ -50,7 +61,7 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
         this.mHp -= dmg;
         this._tintEnemy();
         this.mHitSound.play();
-        
+
         if(this.mHp <= 0){
             this._onDeath();
         }
@@ -59,6 +70,12 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     protected _onDeath(){
         this.anims.stop();
         this.isDead = true;
+        
+        if(this.scene instanceof GameScene){
+            this.scene.addGold(this.mGold);
+        }
+
+        this.mDeathSound.play();
 
         this.mEnemySpeed = 0;
         this.alpha = 0;
