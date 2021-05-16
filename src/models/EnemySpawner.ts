@@ -8,7 +8,7 @@ export default class EnemySpawner {
     private mPath: Phaser.Curves.Path;
     private mScene: Phaser.Scene;
 
-    private mTimeBetweenSpawn: number = 2000;
+    private mTimeBetweenSpawn: number = 5000;
     private mTimeNextEnemy: number = 0;
 
     constructor(scene, path){
