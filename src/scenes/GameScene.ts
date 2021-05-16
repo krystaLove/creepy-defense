@@ -17,6 +17,9 @@ export default class GameScene extends Phaser.Scene
 
     private towers: Tower[] = [];
 
+    private mPlayerHpText;
+    private mPlayerHP: number = 30;
+
     constructor()
     {
         super(CST.SCENES.PLAY); 
@@ -30,7 +33,7 @@ export default class GameScene extends Phaser.Scene
         this.mHud = new Hud(this, this.mLevel);
         this.mHud.makeHud();
 
-
+        this.mPlayerHpText = this.add.text(CST.CELL_SIZE/3, CST.CELL_SIZE * 12, 'HP: ' + this.mPlayerHP,{ font: '46px Arial' });
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)
 
@@ -80,7 +83,13 @@ export default class GameScene extends Phaser.Scene
         this.mLevel.setTower((x - cs / 2) / cs, (y - cs / 2) / cs);
         let tower =  new Tower(this.add.image(x, y, img).setInteractive(), 300, this.mEnemySpawner.getEnemies(),x,y, this);
         this.towers.push(tower);
-        
-        
+    }
+
+    playerTakeDamage(dmg: number){
+        this.mPlayerHP -= dmg;
+        this.mPlayerHpText.setText('HP: ' + this.mPlayerHP);
+        if(this.mPlayerHP <= 0){
+            //lorum
+        }
     }
 }

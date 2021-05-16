@@ -7,6 +7,8 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
 
     private mEnemySpeed: number = 1 / 50000;
 
+    private mHp = 50;
+
     constructor(scene: Phaser.Scene, path: Phaser.Curves.Path, imageProp = CST.IMAGE.CULT_TOWER)
     {
         super(scene, 0, 0, imageProp);
@@ -39,6 +41,23 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
             
         this.setPosition(this.mFollower.vec.x, this.mFollower.vec.y);            
     }
+
+    takeDamage(dmg: number){
+        this.mHp -= dmg;
+        this._tintEnemy();
+        if(this.mHp <= 0){
+            this.setActive(false);
+            this.setVisible(false);
+        }
+    }
+
+    private _tintEnemy(){
+        this.setTint(0xFF0000);
+        this.scene.time.delayedCall(1000, () => {
+            this.clearTint();
+        })
+    }
+
 }
 
 /* Phaser.GameObjects.GameObjectFactory.register(

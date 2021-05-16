@@ -1,4 +1,5 @@
 import * as Phaser from 'phaser';
+import { DiagnosticMessage } from 'typescript';
 import { CST } from "../../constants";
 import Enemy from '../../models/Enemy';
 export default class Bullet extends Phaser.GameObjects.Image {
@@ -8,6 +9,7 @@ export default class Bullet extends Phaser.GameObjects.Image {
     private bullets;
     private target:Enemy;
     private Angle:number;
+    private damage: number = 25;
 
     constructor(scene: Phaser.Scene){
         super(scene, 0, 0, CST.IMAGE.CULT_TOWER);
@@ -39,10 +41,13 @@ export default class Bullet extends Phaser.GameObjects.Image {
         {
             this.setActive(false);
             this.setVisible(false);
+            this.target.takeDamage(this.damage);
         }
     }
     public addBullet(x, y, angle, enemy) {
         let bullet = this.bullets.get();
         if (bullet) bullet.fire(x, y, angle, enemy);
     }
+
+
 }
