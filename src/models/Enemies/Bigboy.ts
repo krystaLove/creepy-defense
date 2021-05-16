@@ -6,7 +6,7 @@ export default class Bigboy extends Enemy{
     {
         super(scene, path, 'bigboy_walk/bigboy_walk-0.png');
         
-        var frameNamesWalk = this.anims.generateFrameNames(CST.SPRITES.BIGBOY_ATLAS, {start: 0, end: 8, zeroPad: 1, prefix: 'bigboy_walk-', suffix:'.png'});
+        var frameNamesWalk = this.anims.generateFrameNames(CST.SPRITES.BIGBOY_ATLAS, {start: 0, end: 7, zeroPad: 1, prefix: 'bigboy_walk-', suffix:'.png'});
         var frameNamesDeath = this.anims.generateFrameNames(CST.SPRITES.BIGBOY_ATLAS, {start: 0, end: 9, zeroPad: 1, prefix: 'bigboy_death-', suffix:'.png'});
 
         this.anims.create({key: 'walk', frames: frameNamesWalk, frameRate: 10, repeat: -1});
