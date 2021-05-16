@@ -7,9 +7,9 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
 
     private mEnemySpeed: number = 1 / 50000;
 
-    constructor(scene: Phaser.Scene, path: Phaser.Curves.Path)
+    constructor(scene: Phaser.Scene, path: Phaser.Curves.Path, imageProp = CST.IMAGE.CULT_TOWER)
     {
-        super(scene, 0, 0, CST.IMAGE.ENEMY);
+        super(scene, 0, 0, imageProp);
         this.mPath = path;
         this.setScale(0.1);
         this.startOnPath();
@@ -19,6 +19,10 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     {
         this.mFollower.t += this.mEnemySpeed * delta;            
         this.mPath.getPoint(this.mFollower.t, this.mFollower.vec);
+
+        if(this.mFollower.vec.x > this.x && !this.flipX){
+            this.toggleFlipX();
+        }
         
         this.setPosition(this.mFollower.vec.x, this.mFollower.vec.y);
         if (this.mFollower.t >= 1)
@@ -31,7 +35,6 @@ export default class Enemy extends Phaser.GameObjects.Sprite {
     startOnPath()
     {
         this.mFollower.t = 0;
-            
         this.mPath.getPoint(this.mFollower.t, this.mFollower.vec);
             
         this.setPosition(this.mFollower.vec.x, this.mFollower.vec.y);            
