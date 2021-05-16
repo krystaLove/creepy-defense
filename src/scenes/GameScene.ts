@@ -1,20 +1,24 @@
 import * as Phaser from 'phaser';
 import { CST } from "../constants"
 import EnemySpawner from '../models/EnemySpawner';
+import Level from '../models/Level';
 
 export default class GameScene extends Phaser.Scene
 {
 
     private path: Phaser.Curves.Path;
     private mEnemySpawner: EnemySpawner;
-
+    private mLevel: Level;
     constructor()
     {
         super(CST.SCENES.PLAY);
+        
     }
 
     create() 
     {
+        this.mLevel = new Level();
+        
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)
 

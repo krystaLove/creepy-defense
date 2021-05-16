@@ -9,5 +9,7 @@ export const CST = {
         PLAY: "startButton.png",
         ENEMY: "baseEnemy.png"
     },
-    CELL_SIZE: 64
+    CELL_SIZE: 70,
+    MAP_WIDTH: 10,
+    MAP_HEIGHT: 10
 }
