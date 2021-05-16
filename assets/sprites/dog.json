@@ -1,0 +1,125 @@
+{
+	"textures": [
+		{
+			"image": "dog.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 49,
+				"h": 148
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "dog-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 47,
+						"h": 31
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 47,
+						"h": 31
+					}
+				},
+				{
+					"filename": "dog-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 4,
+						"w": 46,
+						"h": 28
+					},
+					"frame": {
+						"x": 1,
+						"y": 34,
+						"w": 46,
+						"h": 28
+					}
+				},
+				{
+					"filename": "dog-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 17,
+						"y": 4,
+						"w": 46,
+						"h": 28
+					},
+					"frame": {
+						"x": 1,
+						"y": 64,
+						"w": 46,
+						"h": 28
+					}
+				},
+				{
+					"filename": "dog-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 8,
+						"w": 46,
+						"h": 24
+					},
+					"frame": {
+						"x": 1,
+						"y": 94,
+						"w": 46,
+						"h": 24
+					}
+				},
+				{
+					"filename": "dog-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 63,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 5,
+						"w": 45,
+						"h": 27
+					},
+					"frame": {
+						"x": 1,
+						"y": 120,
+						"w": 45,
+						"h": 27
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:cadfa00c3ab8785525a083bd106b9f16:9343b531f693d5c82a4631b1c5950b49:ec6c3e0b9eb3cd3c555a7c426f3b0ee8$"
+	}
+}

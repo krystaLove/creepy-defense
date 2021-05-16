@@ -26,10 +26,20 @@ export default class PreloaderScene extends Phaser.Scene
         }
     }
 
+    private _loadAtlases()
+    {
+        this.load.setPath("./assets/sprites");
+
+        for(let prop in CST.SPRITES){
+            this.load.multiatlas(CST.SPRITES[prop], `${CST.SPRITES[prop]}`);
+        }
+    }
+
     preload() 
     {
         this._loadImages();
         this._loadTiles();
+        this._loadAtlases();
 
         let loadingBar = this.add.graphics({
             fillStyle: {

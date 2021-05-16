@@ -13,6 +13,9 @@ export const CST = {
     TILES: {
         LEVEL_TILES: "sci-fi-tiles.png"
     },
+    SPRITES: {
+        DOG_ATLAS: "dog.json"
+    },
     CELL_SIZE: 70,
     MAP_WIDTH: 14,
     MAP_HEIGHT: 10
