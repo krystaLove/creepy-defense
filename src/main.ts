@@ -13,6 +13,8 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
     width: window.innerWidth,
     height: window.innerHeight,
   },
+  
+  pixelArt: true,
  
   physics: {
     default: 'arcade',
