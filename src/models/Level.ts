@@ -40,39 +40,65 @@ export default class Level{
         }
 
         this.mLevelData[0][0] = 1;
-        this.mPath.moveTo(this._getPixelsFromPosition(1), this._getPixelsFromPosition(1));
+        this.mPath.moveTo(this._getPixelsFromPosition(0), this._getPixelsFromPosition(-1));
 
-        let anchorPoints: number[] = [0];
+        let anchorPoints: number[] = [];
 
-        for(let i = 1; i < w; ++i){
+        for(let i = 1; i < w; i += 2){
             let rndVal = Math.floor(Math.random() * h);
             anchorPoints.push(rndVal);
+
             this.mLevelData[rndVal][i] = 1;
+            this.mLevelData[rndVal][i - 1] = 1; 
         }
 
         let curH = 0;
+        let curW = 0;
 
-        for(let i = 1; i < w; ++i){
-            let nextH = anchorPoints[i];
+        anchorPoints.forEach(nextH => {
             while(curH > nextH){
                 curH--;
-                this.mLevelData[curH][i - 1] = 1;
+                this.mLevelData[curH][curW] = 1;
             }
 
             while(curH < nextH){
                 curH++;
-                this.mLevelData[curH][i - 1] = 1;
+                this.mLevelData[curH][curW] = 1;
             }
 
-            this.mPath.lineTo(this._getPixelsFromPosition(i), this._getPixelsFromPosition(curH + 1));
-            this.mPath.lineTo(this._getPixelsFromPosition(i + 1), this._getPixelsFromPosition(curH + 1));
+            this.mLevelData[curH][curW + 2] = 1;
+
+            this.mPath.lineTo(this._getPixelsFromPosition(curW), this._getPixelsFromPosition(curH));
+            this.mPath.lineTo(this._getPixelsFromPosition(curW + 2), this._getPixelsFromPosition(curH));
+
+            curW += 2;
+        });
+
+        this.mPath.lineTo(this._getPixelsFromPosition(w + 1), this._getPixelsFromPosition(curH));
+
+        if(Math.floor(Math.random() * 2) == 1){
+            this.mPath = this._reversePath();
         }
+            
         console.log(anchorPoints);
         console.log(this.mLevelData);
     }
 
+    private _reversePath(): Phaser.Curves.Path {
+        let reversed: Phaser.Curves.Path = new Phaser.Curves.Path();
+
+        let points = this.mPath.getPoints();
+        reversed.moveTo(this.mPath.getEndPoint());
+
+        for(let i = points.length - 1; i >= 0; i--){
+            reversed.lineTo(points[i]);
+        }
+        
+        return reversed;
+    }
+
     private _getPixelsFromPosition(pos): number{
-        return pos * CST.CELL_SIZE -CST.CELL_SIZE / 2;
+        return (pos + 1) * CST.CELL_SIZE - CST.CELL_SIZE / 2;
     }
 
 }
