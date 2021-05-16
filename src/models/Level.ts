@@ -1,11 +1,17 @@
+import { createRegularExpressionLiteral, createSolutionBuilderWithWatch } from "typescript";
 import { CST } from "../constants";
 
 export default class Level{
 
     private mLevelData: number[][];
+    private mPath: Phaser.Curves.Path = new Phaser.Curves.Path();
 
     constructor(){
         this._generateLevel();
+    }
+
+    public getPath(): Phaser.Curves.Path{
+        return this.mPath;
     }
 
     private _generateLevel(){
@@ -23,6 +29,7 @@ export default class Level{
         }
 
         this.mLevelData[0][0] = 1;
+        this.mPath.moveTo(this._getPixelsFromPosition(1), this._getPixelsFromPosition(1));
 
         let anchorPoints: number[] = [0];
 
@@ -45,11 +52,16 @@ export default class Level{
                 curH++;
                 this.mLevelData[curH][i - 1] = 1;
             }
+
+            this.mPath.lineTo(this._getPixelsFromPosition(i), this._getPixelsFromPosition(curH + 1));
+            this.mPath.lineTo(this._getPixelsFromPosition(i + 1), this._getPixelsFromPosition(curH + 1));
         }
         console.log(anchorPoints);
         console.log(this.mLevelData);
+    }
 
-
+    private _getPixelsFromPosition(pos): number{
+        return pos * CST.CELL_SIZE -CST.CELL_SIZE / 2;
     }
 
 }
