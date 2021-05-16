@@ -1,6 +1,8 @@
 import * as Phaser from 'phaser';
-import Enemy from "../models/Enemy";
+import * as EnemyFactory from '../models/Enemies/EnemyFactory';
+import Enemy from '../models/Enemy';
 import { CST } from "../constants";
+import { textChangeRangeIsUnchanged } from 'typescript';
 
 export default class EnemySpawner {
 
@@ -8,7 +10,8 @@ export default class EnemySpawner {
     private mPath: Phaser.Curves.Path;
     private mScene: Phaser.Scene;
 
-    private mTimeBetweenSpawn: number = 5000;
+    private mTimeBetweenSpawnMax: number = 10000;
+    private mTimeBetweenSpawnMin: number = 5000;
     private mTimeNextEnemy: number = 0;
 
     constructor(scene, path){
@@ -33,12 +36,13 @@ export default class EnemySpawner {
 
     private _trySpawn(time)
     {
+        console.log(this.mTimeNextEnemy);   
         if(this._canSpawn(time)){
             console.log(this.mEnemyPool.length + " - size of enemy pool");
-            const enemy: Enemy = new Enemy(this.mScene, this.mPath);
+            const enemy: Enemy = EnemyFactory.createEnemy(this.mScene, this.mPath, EnemyFactory.ENEMIES.DOG);
             this.mScene.add.existing(enemy);
             this.mEnemyPool.push(enemy);
-            this.mTimeNextEnemy += 3000;
+            this.mTimeNextEnemy += Math.floor(Math.random() * (this.mTimeBetweenSpawnMax - this.mTimeBetweenSpawnMin)) + this.mTimeBetweenSpawnMin;
         }
     }
 
@@ -48,7 +52,9 @@ export default class EnemySpawner {
 
     private _canSpawn(time: number): boolean 
     {
-        return time > this.mTimeNextEnemy;
+        let res = time > this.mTimeNextEnemy;
+        
+        return res;
     }
 
 }
