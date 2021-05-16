@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import { CST } from "../constants"
 import EnemySpawner from '../models/EnemySpawner';
 import Level from '../models/Level';
+import LevelView from '../view/LevelView';
 
 export default class GameScene extends Phaser.Scene
 {
@@ -9,6 +10,7 @@ export default class GameScene extends Phaser.Scene
     private path: Phaser.Curves.Path;
     private mEnemySpawner: EnemySpawner;
     private mLevel: Level;
+    private mLevelView: LevelView;
 
     constructor()
     {
@@ -18,7 +20,8 @@ export default class GameScene extends Phaser.Scene
     create() 
     {
         this.mLevel = new Level();
-        this.mLevel.getPath();
+        this.mLevelView = new LevelView(this, this.mLevel);
+        this.mLevelView.loadView();
         
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)

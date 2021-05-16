@@ -1,4 +1,3 @@
-import { createRegularExpressionLiteral, createSolutionBuilderWithWatch } from "typescript";
 import { CST } from "../constants";
 
 export default class Level{
@@ -12,6 +11,10 @@ export default class Level{
 
     public getPath(): Phaser.Curves.Path{
         return this.mPath;
+    }
+
+    public getLevelData(): number[][]{
+        return this.mLevelData;
     }
 
     private _generateLevel(){
