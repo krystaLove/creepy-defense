@@ -9,6 +9,14 @@ export default class Level{
         this._generateLevel();
     }
 
+    public setTower(x, y){
+        this.mLevelData[y][x] = 2;
+    }
+
+    public isEmpty(x , y): boolean {
+        return this.mLevelData[y][x] == 0;
+    }
+
     public getPath(): Phaser.Curves.Path{
         return this.mPath;
     }
