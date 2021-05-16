@@ -1,20 +1,28 @@
 import * as Phaser from 'phaser';
 import { CST } from "../constants"
 import EnemySpawner from '../models/EnemySpawner';
+import Level from '../models/Level';
+import LevelView from '../view/LevelView';
 
 export default class GameScene extends Phaser.Scene
 {
 
     private path: Phaser.Curves.Path;
     private mEnemySpawner: EnemySpawner;
+    private mLevel: Level;
+    private mLevelView: LevelView;
 
     constructor()
     {
-        super(CST.SCENES.PLAY);
+        super(CST.SCENES.PLAY); 
     }
 
     create() 
     {
+        this.mLevel = new Level();
+        this.mLevelView = new LevelView(this, this.mLevel);
+        this.mLevelView.loadView();
+        
         let graphics = this.add.graphics();
         graphics.lineStyle(3, 0xffffff, 1)
 
@@ -29,14 +37,7 @@ export default class GameScene extends Phaser.Scene
 
     private _createPath()
     {
-        let cs = CST.CELL_SIZE;
-        let w = this.renderer.width;
-        
-        this.path = this.add.path(cs + cs / 2, - cs / 2);
-        this.path.lineTo(cs + cs / 2, 164);
-        this.path.lineTo(480, 164);
-        this.path.lineTo(480, 544);
-        this.path.lineTo(w + CST.CELL_SIZE / 2, 544);
+        this.path = this.mLevel.getPath();
     }
 
     private _drawGrid(graphics)

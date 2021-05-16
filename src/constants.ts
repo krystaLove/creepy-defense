@@ -9,5 +9,10 @@ export const CST = {
         PLAY: "startButton.png",
         ENEMY: "baseEnemy.png"
     },
-    CELL_SIZE: 64
+    TILES: {
+        LEVEL_TILES: "sci-fi-tiles.png"
+    },
+    CELL_SIZE: 64,
+    MAP_WIDTH: 10,
+    MAP_HEIGHT: 10
 }
