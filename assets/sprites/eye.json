@@ -1,0 +1,440 @@
+{
+	"textures": [
+		{
+			"image": "eye.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 228,
+				"h": 64
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "eye-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 25,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 25,
+						"h": 32
+					}
+				},
+				{
+					"filename": "eye-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 4,
+						"w": 18,
+						"h": 28
+					},
+					"frame": {
+						"x": 1,
+						"y": 35,
+						"w": 18,
+						"h": 28
+					}
+				},
+				{
+					"filename": "eye-17.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 5,
+						"w": 23,
+						"h": 27
+					},
+					"frame": {
+						"x": 21,
+						"y": 35,
+						"w": 23,
+						"h": 27
+					}
+				},
+				{
+					"filename": "eye-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 0,
+						"w": 22,
+						"h": 32
+					},
+					"frame": {
+						"x": 28,
+						"y": 1,
+						"w": 22,
+						"h": 32
+					}
+				},
+				{
+					"filename": "eye-16.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 2,
+						"w": 22,
+						"h": 23
+					},
+					"frame": {
+						"x": 46,
+						"y": 35,
+						"w": 22,
+						"h": 23
+					}
+				},
+				{
+					"filename": "eye-11.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 18,
+						"h": 32
+					},
+					"frame": {
+						"x": 52,
+						"y": 1,
+						"w": 18,
+						"h": 32
+					}
+				},
+				{
+					"filename": "eye-18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 14,
+						"w": 28,
+						"h": 18
+					},
+					"frame": {
+						"x": 70,
+						"y": 35,
+						"w": 28,
+						"h": 18
+					}
+				},
+				{
+					"filename": "eye-13.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 0,
+						"w": 18,
+						"h": 32
+					},
+					"frame": {
+						"x": 72,
+						"y": 1,
+						"w": 18,
+						"h": 32
+					}
+				},
+				{
+					"filename": "eye-15.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 6,
+						"y": 0,
+						"w": 18,
+						"h": 32
+					},
+					"frame": {
+						"x": 92,
+						"y": 1,
+						"w": 18,
+						"h": 32
+					}
+				},
+				{
+					"filename": "eye-19.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 22,
+						"w": 32,
+						"h": 10
+					},
+					"frame": {
+						"x": 100,
+						"y": 35,
+						"w": 32,
+						"h": 10
+					}
+				},
+				{
+					"filename": "eye-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 28,
+						"h": 31
+					},
+					"frame": {
+						"x": 112,
+						"y": 1,
+						"w": 28,
+						"h": 31
+					}
+				},
+				{
+					"filename": "eye-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 25,
+						"h": 29
+					},
+					"frame": {
+						"x": 134,
+						"y": 34,
+						"w": 25,
+						"h": 29
+					}
+				},
+				{
+					"filename": "eye-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 18,
+						"h": 31
+					},
+					"frame": {
+						"x": 142,
+						"y": 1,
+						"w": 18,
+						"h": 31
+					}
+				},
+				{
+					"filename": "eye-12.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 18,
+						"h": 31
+					},
+					"frame": {
+						"x": 142,
+						"y": 1,
+						"w": 18,
+						"h": 31
+					}
+				},
+				{
+					"filename": "eye-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 0,
+						"w": 20,
+						"h": 29
+					},
+					"frame": {
+						"x": 161,
+						"y": 34,
+						"w": 20,
+						"h": 29
+					}
+				},
+				{
+					"filename": "eye-10.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 25,
+						"h": 30
+					},
+					"frame": {
+						"x": 162,
+						"y": 1,
+						"w": 25,
+						"h": 30
+					}
+				},
+				{
+					"filename": "eye-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 18,
+						"h": 30
+					},
+					"frame": {
+						"x": 183,
+						"y": 33,
+						"w": 18,
+						"h": 30
+					}
+				},
+				{
+					"filename": "eye-14.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 0,
+						"w": 18,
+						"h": 30
+					},
+					"frame": {
+						"x": 189,
+						"y": 1,
+						"w": 18,
+						"h": 30
+					}
+				},
+				{
+					"filename": "eye-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 2,
+						"w": 18,
+						"h": 30
+					},
+					"frame": {
+						"x": 203,
+						"y": 33,
+						"w": 18,
+						"h": 30
+					}
+				},
+				{
+					"filename": "eye-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 18,
+						"h": 30
+					},
+					"frame": {
+						"x": 209,
+						"y": 1,
+						"w": 18,
+						"h": 30
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:3711de9ee67ab4ec0564f8160bd25414:428a90b97302e68662895fc592b9b3cf:f42ee5ea2430fcb33467ad1e503d69da$"
+	}
+}

@@ -1,0 +1,398 @@
+{
+	"textures": [
+		{
+			"image": "bigboy_death.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 254,
+				"h": 282
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bigboy_death-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 52,
+						"w": 70,
+						"h": 41
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 70,
+						"h": 41
+					}
+				},
+				{
+					"filename": "bigboy_death-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 78,
+						"h": 42
+					},
+					"frame": {
+						"x": 73,
+						"y": 1,
+						"w": 78,
+						"h": 42
+					}
+				},
+				{
+					"filename": "bigboy_death-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 80,
+						"h": 42
+					},
+					"frame": {
+						"x": 153,
+						"y": 1,
+						"w": 80,
+						"h": 42
+					}
+				},
+				{
+					"filename": "bigboy_death-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 80,
+						"h": 42
+					},
+					"frame": {
+						"x": 1,
+						"y": 45,
+						"w": 80,
+						"h": 42
+					}
+				},
+				{
+					"filename": "bigboy_death-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 80,
+						"h": 42
+					},
+					"frame": {
+						"x": 83,
+						"y": 45,
+						"w": 80,
+						"h": 42
+					}
+				},
+				{
+					"filename": "bigboy_death-8.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 80,
+						"h": 43
+					},
+					"frame": {
+						"x": 165,
+						"y": 45,
+						"w": 80,
+						"h": 43
+					}
+				},
+				{
+					"filename": "bigboy_death-9.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 51,
+						"w": 80,
+						"h": 43
+					},
+					"frame": {
+						"x": 1,
+						"y": 89,
+						"w": 80,
+						"h": 43
+					}
+				},
+				{
+					"filename": "bigboy_death-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 40,
+						"w": 62,
+						"h": 52
+					},
+					"frame": {
+						"x": 83,
+						"y": 89,
+						"w": 62,
+						"h": 52
+					}
+				},
+				{
+					"filename": "bigboy_death-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 35,
+						"y": 34,
+						"w": 54,
+						"h": 58
+					},
+					"frame": {
+						"x": 147,
+						"y": 90,
+						"w": 54,
+						"h": 58
+					}
+				},
+				{
+					"filename": "bigboy_walk-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 30,
+						"w": 49,
+						"h": 61
+					},
+					"frame": {
+						"x": 203,
+						"y": 90,
+						"w": 49,
+						"h": 61
+					}
+				},
+				{
+					"filename": "bigboy_walk-3.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 31,
+						"w": 46,
+						"h": 61
+					},
+					"frame": {
+						"x": 1,
+						"y": 134,
+						"w": 46,
+						"h": 61
+					}
+				},
+				{
+					"filename": "bigboy_walk-7.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 31,
+						"w": 36,
+						"h": 61
+					},
+					"frame": {
+						"x": 49,
+						"y": 143,
+						"w": 36,
+						"h": 61
+					}
+				},
+				{
+					"filename": "bigboy_death-0.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 30,
+						"w": 52,
+						"h": 62
+					},
+					"frame": {
+						"x": 87,
+						"y": 143,
+						"w": 52,
+						"h": 62
+					}
+				},
+				{
+					"filename": "bigboy_walk-4.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 47,
+						"y": 30,
+						"w": 43,
+						"h": 62
+					},
+					"frame": {
+						"x": 141,
+						"y": 150,
+						"w": 43,
+						"h": 62
+					}
+				},
+				{
+					"filename": "bigboy_walk-5.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 29,
+						"w": 67,
+						"h": 63
+					},
+					"frame": {
+						"x": 186,
+						"y": 153,
+						"w": 67,
+						"h": 63
+					}
+				},
+				{
+					"filename": "bigboy_walk-1.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 27,
+						"y": 29,
+						"w": 75,
+						"h": 63
+					},
+					"frame": {
+						"x": 1,
+						"y": 206,
+						"w": 75,
+						"h": 63
+					}
+				},
+				{
+					"filename": "bigboy_walk-2.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 23,
+						"y": 30,
+						"w": 78,
+						"h": 63
+					},
+					"frame": {
+						"x": 78,
+						"y": 214,
+						"w": 78,
+						"h": 63
+					}
+				},
+				{
+					"filename": "bigboy_walk-6.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 120,
+						"h": 120
+					},
+					"spriteSourceSize": {
+						"x": 24,
+						"y": 30,
+						"w": 68,
+						"h": 63
+					},
+					"frame": {
+						"x": 158,
+						"y": 218,
+						"w": 68,
+						"h": 63
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:e5975d8650b6d2c72299d69e6528fea6:ffd81d4303fd2fb9d296978a24a3c4d1:357197a69c9ecc51c3aba715e0b4aed6$"
+	}
+}
